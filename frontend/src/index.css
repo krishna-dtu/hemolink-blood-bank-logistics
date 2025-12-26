@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.5rem;
+  --background: 220 35% 7%;
+  --foreground: 210 40% 98%;
+  --card: 222 35% 10%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 35% 10%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 346 100% 56%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 160 75% 47%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 33% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 346 100% 56%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0b0f17;
+  color: #f8fafc;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111623;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a202e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3040;
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  background: rgba(17, 22, 35, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Neon glow effects */
+.neon-red {
+  box-shadow: 0 0 20px rgba(255, 48, 79, 0.4);
+}
+
+.neon-green {
+  box-shadow: 0 0 20px rgba(29, 209, 161, 0.4);
+}
+
+/* Leaflet map overrides */
+.leaflet-container {
+  background: #0b0f17 !important;
+  border-radius: 0.75rem;
+}
+
+.leaflet-tile {
+  filter: brightness(0.6) saturate(0.8) hue-rotate(180deg) invert(1);
+}

@@ -1,0 +1,136 @@
+{
+  "project_name": "HemoLink",
+  "version": "1.0.0",
+  "design_philosophy": {
+    "core_concept": "NASA Control Center meets Health AI",
+    "emotional_tone": "Trustworthy, Urgent, Precision, High-Tech",
+    "visual_style": "Dark Mode, Glassmorphism, Neon Accents, Data-Dense",
+    "key_principles": [
+      "Fusion over Imitation: Mix medical sterility with cyberpunk neon.",
+      "Content is King: Data must be legible instantly. High contrast is non-negotiable.",
+      "Zoom In: Use macro details for blood/cell visuals.",
+      "Negative Space: Don't clutter. Group data logically."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "installation": "Import from Google Fonts: https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap",
+    "usage_rules": [
+      "Headings (H1-H3): Use 'Outfit'. Tracking tight (-0.02em). Weight 600-800.",
+      "Body Text: Use 'Manrope'. Tracking normal. Weight 400.",
+      "Data/Numbers: Use 'JetBrains Mono' or 'Manrope' with tabular-nums.",
+      "Overlines: Uppercase, tracking-widest (0.2em), text-xs."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "default": "#0b0f17",
+        "paper": "#111623",
+        "subtle": "#1a202e"
+      },
+      "primary": {
+        "main": "#ff304f",
+        "glow": "rgba(255, 48, 79, 0.5)",
+        "hover": "#d92640"
+      },
+      "secondary": {
+        "main": "#1dd1a1",
+        "glow": "rgba(29, 209, 161, 0.5)",
+        "hover": "#10ac84"
+      },
+      "accent": {
+        "cyan": "#00d2d3",
+        "purple": "#5f27cd"
+      },
+      "text": {
+        "primary": "#f8fafc",
+        "secondary": "#94a3b8",
+        "muted": "#64748b"
+      },
+      "border": {
+        "subtle": "rgba(255, 255, 255, 0.08)",
+        "highlight": "rgba(255, 255, 255, 0.15)"
+      }
+    },
+    "tailwind_config_extension": {
+      "colors": {
+        "background": "hsl(220, 35%, 7%)",
+        "foreground": "hsl(210, 40%, 98%)",
+        "card": "hsl(222, 35%, 10%)",
+        "card-foreground": "hsl(210, 40%, 98%)",
+        "popover": "hsl(222, 35%, 10%)",
+        "popover-foreground": "hsl(210, 40%, 98%)",
+        "primary": "hsl(346, 100%, 65%)",
+        "primary-foreground": "hsl(210, 40%, 98%)",
+        "secondary": "hsl(160, 75%, 47%)",
+        "secondary-foreground": "hsl(222, 47%, 11%)",
+        "muted": "hsl(217, 33%, 17%)",
+        "muted-foreground": "hsl(215, 20%, 65%)",
+        "accent": "hsl(217, 33%, 17%)",
+        "accent-foreground": "hsl(210, 40%, 98%)",
+        "destructive": "hsl(0, 62%, 30%)",
+        "destructive-foreground": "hsl(210, 40%, 98%)",
+        "border": "hsl(217, 33%, 17%)",
+        "input": "hsl(217, 33%, 17%)",
+        "ring": "hsl(346, 100%, 65%)"
+      }
+    }
+  },
+  "components": {
+    "glass_card": {
+      "classes": "bg-[#111623]/70 backdrop-blur-xl border border-white/10 shadow-2xl rounded-xl",
+      "description": "Standard container for dashboard widgets. Must have a subtle inner border."
+    },
+    "neon_button": {
+      "classes": "bg-[#ff304f] hover:bg-[#ff304f]/90 text-white shadow-[0_0_20px_rgba(255,48,79,0.4)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,48,79,0.6)] rounded-lg font-semibold tracking-wide",
+      "description": "Primary CTA. Emits a glow."
+    },
+    "status_badge": {
+      "success": "bg-[#1dd1a1]/10 text-[#1dd1a1] border border-[#1dd1a1]/20 px-2 py-1 rounded-md text-xs font-medium uppercase tracking-wider",
+      "alert": "bg-[#ff304f]/10 text-[#ff304f] border border-[#ff304f]/20 px-2 py-1 rounded-md text-xs font-medium uppercase tracking-wider",
+      "neutral": "bg-slate-800/50 text-slate-400 border border-slate-700 px-2 py-1 rounded-md text-xs font-medium uppercase tracking-wider"
+    },
+    "inputs": {
+      "classes": "bg-[#0b0f17]/50 border-white/10 focus:border-[#ff304f]/50 focus:ring-[#ff304f]/20 text-white placeholder:text-slate-600"
+    }
+  },
+  "layout_strategies": {
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-12 gap-6 p-6",
+    "bento_grid_rules": [
+      "Hero Widget: col-span-12 lg:col-span-8 row-span-2",
+      "Stat Card: col-span-6 lg:col-span-4 row-span-1",
+      "List View: col-span-12 lg:col-span-4 row-span-2"
+    ],
+    "spacing": {
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "section_gap": "gap-8 md:gap-12"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1601645219077-ee6ed4cb9f7d?auto=format&fit=crop&w=1920&q=80",
+      "doctor_avatar": "https://images.pexels.com/photos/5452223/pexels-photo-5452223.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "lab_interior": "https://images.unsplash.com/photo-1654880707509-b7e464813ded?auto=format&fit=crop&w=1000&q=80",
+      "drone_delivery": "https://images.pexels.com/photos/7101255/pexels-photo-7101255.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "blood_bag_mockup": "https://images.unsplash.com/photo-1615461166324-cd1f91f8b4b7?auto=format&fit=crop&w=800&q=80"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "preferred_icons": ["Activity", "Droplet", "MapPin", "ShieldAlert", "Truck", "Users", "LayoutDashboard", "Settings"]
+    }
+  },
+  "universal_guidelines": [
+    "DARK MODE ONLY: The app should feel like a cockpit at night.",
+    "NO GENERIC GRADIENTS: Use subtle radial gradients to highlight active areas, not full linear gradients.",
+    "DATA DENSITY: Dashboards should be dense but legible. Use 'text-xs' and 'text-sm' liberally for data tables.",
+    "MICRO-INTERACTIONS: All cards should have a subtle hover lift (-translate-y-1) and border lighten.",
+    "ACCESSIBILITY: Ensure red/green status indicators have accompanying text or icons for colorblind users.",
+    "TESTING: All interactive elements must have 'data-testid' attributes."
+  ],
+  "instructions_to_main_agent": "1. Update 'tailwind.config.js' with the colors provided in 'colors.tailwind_config_extension'. 2. Update 'index.css' to enforce the dark theme variables by default. 3. Install 'framer-motion' if not present. 4. Build the 'Landing Page' first, then the 'Dashboard'. 5. Use the provided image URLs for placeholders."
+}
